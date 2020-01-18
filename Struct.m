@@ -43,7 +43,7 @@ classdef Struct < handle
         
         function obj = set(obj, val, type_)
             %obj = SET(obj, val, type_) Puts val of type type_ into struct
-            sizeof(type_);
+            serial_com.sizeof(type_);
             for i = 1:length(val)
                 bytes = typecast(cast(val(i), type_), 'uint8');
                 obj.buffer_ = [obj.buffer_, bytes];
@@ -52,7 +52,7 @@ classdef Struct < handle
         
         function val = get(obj, type_)
             %val = GET(obj, type_) Gets val of type type_ from struct
-            n = sizeof(type_);
+            n = serial_com.sizeof(type_);
             val = typecast(obj.buffer_(1:n), type_);
             obj.buffer_ = obj.buffer_(n+1:end);
         end

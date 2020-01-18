@@ -29,7 +29,7 @@ classdef SerialStruct < handle
             if nargin < 2, timeout = 1.0; end
             obj.serial_ = serial_;
             obj.timeout = timeout;
-            obj.struct_ = Struct();
+            obj.struct_ = serial_com.Struct();
         end
         
         function serial_ = get_serial(obj)
@@ -60,7 +60,7 @@ classdef SerialStruct < handle
             %   
             %   Outputs:
             %   - val = Value returned [type_]
-            n = sizeof(type_);
+            n = serial_com.sizeof(type_);
             obj.wait(n);
             buffer = fread(obj.serial_, n);
             val = obj.struct_.set_buffer(buffer).get(type_);
