@@ -26,10 +26,11 @@ classdef SerialStruct < handle
             %   Inputs:
             %   - serial_ = serial or Bluetooth object
             %   - timeout = Read timeout [s, default = 1.0]
+            import('serial_com.Struct');
             if nargin < 2, timeout = 1.0; end
             obj.serial_ = serial_;
             obj.timeout = timeout;
-            obj.struct_ = serial_com.Struct();
+            obj.struct_ = Struct();
         end
         
         function serial_ = get_serial(obj)
