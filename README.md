@@ -14,5 +14,8 @@ towards embedded systems. The files in this package are described below:
 - sizeof : Matlab implementation of C sizeof function
 - hc06_config : Function for programming HC06 Bluetooth modules
 
+### Toolbox Dependencies
+- Instrument Control 4.1
+
 ### Cloning and Submodules
 Clone this repo as '+serial_com' and add the containing dir to the Matlab path.
