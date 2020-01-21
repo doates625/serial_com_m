@@ -3,8 +3,7 @@ Matlab package for serial communication
 Written by Dan Oates (WPI Class of 2020)
 
 ### Description
-This package contains serial communication functions and classes targeted
-towards embedded systems. The files in this package are described below:
+This package contains serial communication functions and classes targeted towards embedded systems. The files in this package are described below:
 
 - make_serial : Function to make and open serial port
 - make_bluetooth : Function to make and open Bluetooth object
