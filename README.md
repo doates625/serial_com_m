@@ -12,6 +12,7 @@ This package contains serial communication functions and classes targeted toward
 - Struct : Class for interpreting byte arrays as C data types
 - sizeof : Matlab implementation of C sizeof function
 - hc06_config : Function for programming HC06 Bluetooth modules
+- terminal : Function to print incoming ascii data from serial device
 
 ### Toolbox Dependencies
 - Instrument Control 4.1
